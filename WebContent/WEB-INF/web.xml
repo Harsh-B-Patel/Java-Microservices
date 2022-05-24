@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+  xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+  version="4.0"
+>
+  <display-name>Project B</display-name>
+  <context-param>
+    <param-name>MapQuestAPIKey</param-name>
+    <param-value>nfL61jlKdCKN38BUuQBrzytGw3sggVvI</param-value>
+  </context-param>
+    <context-param>
+    <param-name>GeoServiceIP</param-name>
+    <param-value>130.63.96.79</param-value>
+  </context-param>
+  <context-param>
+    <param-name>GeoServicePort</param-name>
+    <param-value>38909</param-value>
+  </context-param>
+
+
+  <servlet>
+    <servlet-name>FAuth</servlet-name>
+    <servlet-class>services.FAuth</servlet-class>
+    <init-param>
+      <param-name>serviceAddress</param-name>
+      <param-value>130.63.168.150</param-value>
+    </init-param>
+    <init-param>
+      <param-name>servicePort</param-name>
+      <param-value>40215</param-value>
+    </init-param>
+  </servlet>
+  <servlet>
+    <servlet-name>GeoWeb</servlet-name>
+    <servlet-class>services.GeoWeb</servlet-class>
+    <init-param>
+      <param-name>serviceAddress</param-name>
+      <param-value>130.63.168.99</param-value>
+    </init-param>
+    <init-param>
+      <param-name>servicePort</param-name>
+      <param-value>35155</param-value>
+    </init-param>
+  </servlet>
+
+
+</web-app>
